@@ -90,7 +90,7 @@ for(var i = 0; i < collection.length; i++) {
 
 // write a loop that will make the description all uppercase for all products
 
-for (var i = 0; i < collection.length; i++) {
+for(var i = 0; i < collection.length; i++) {
 
   console.log(collection[i].description.toUpperCase());
 }
@@ -105,10 +105,8 @@ for (var i = 0; i < collection.length; i++) {
 
 //make a loop to reduce quantity of all products by 1 unless it results in negative number
 
-for (var i = 0; i < collection.length; i++) {
-
-  if (collection[i].quantity > 0) {
-    for (var i = 0; i < collection.length; i++)
-    console.log(collection[i].quantity - 1);
-  } 
+for(var i=0; i < collection.length; i++) {
+  collection[i].quantity - collection[i].quantity >= 1 ? collection[i].quantity - 1 : collection[i].quantity
 }
+
+console.log(collection[4].quantity);
