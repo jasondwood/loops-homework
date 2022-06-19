@@ -62,14 +62,14 @@ function findStudentById(id) {
     }
 }
 
-findStudentById(31);
-findStudentById(13);
+findStudentById(32);
+findStudentById(11);
 
 // 2. Add a student 
 
 let new_student = {
     name: "Nancy Newbody",
-    user_id: 4321,
+    student_id: 4321,
     grade: "VP for Houseplants",
     gpa: 4.0,
     teacher: "New Teacher",
@@ -85,18 +85,18 @@ function removeStudent(id) {
             // delete the matching user
             found_student = true;
             students.splice(i, 1);
-            console.log("Removed user with user_id of " + id + ", " + students[i].name);
+            console.log("Removed user with user_id of " + id);
+            console.log("Here is a list of students after the removal: ");
+            console.log(students);
             break;
         }
     }
     if(!found_student) {
         console.log("could not find user");
+
     }
 }
-
 removeStudent(45);
-
-
 
 // 4. Change a student's First Name
 
@@ -106,6 +106,7 @@ function changeStudentName(id) {
     let studentMatch = false;
     for(var i = 0; i < students.length; i++) {
         if (students[i].student_id == id) {
+            studentMatch = true;
             // declare variables to split up full name if ID match is found
             let fullName = students[i].name.split(' '),
             firstName = fullName[0],
@@ -118,5 +119,5 @@ function changeStudentName(id) {
     }
 }
 
-changeStudentName(45);
-console.log()
+changeStudentName(42);
+console.log();
